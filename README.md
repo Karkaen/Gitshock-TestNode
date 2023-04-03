@@ -18,7 +18,11 @@ sudo apt install ethereum -y
  
 ```
 wget https://github.com/sigp/lighthouse/releases/download/v4.0.1/lighthouse-v4.0.1-x86_64-unknown-linux-gnu-portable.tar.gz  
+```
+```
 tar -xzf lighthouse-v4.0.1-x86_64-unknown-linux-gnu-portable.tar.gz
+```
+```
 rm lighthouse-v4.0.1-x86_64-unknown-linux-gnu-portable.tar.gz
 mv lighthouse /usr/local/bin
 ```
@@ -49,9 +53,16 @@ mkdir testnet/logs
 cd testnet
 ```
  -  ####  Download Repository
- ```
- `wget https://github.com/gitshock-labs/testnet-list/releases/download/Iteration-70.a/cartenz-iteration-70.a.zip`  `unzip cartenz-iteration-70.a.zip`  `rm -rf cartenz-iteration-70.a.zip`
- ```
+```
+wget https://github.com/gitshock-labs/testnet-list/releases/download/Iteration-70.a/cartenz-iteration-70.a.zip
+```
+```
+unzip cartenz-iteration-70.a.zip
+```
+```
+rm -rf cartenz-iteration-70.a.zip
+```
+
  -  ####  Create Jwt Secret
  ```
  openssl rand -hex 32 | tr -d "\n" > "jwt.hex"
