@@ -91,7 +91,7 @@ screen -S cartenz
  --bootnodes "enode://0e2b41699b95e8c915f4f5d18962c0d2db35dc22d3abbebbd25fc48221d1039943240ad37a6e9d853c0b4ea45da7b6b5203a7127b5858c946fc040cace8d2d63@147.75.71.217:30303,enode://45b4fff6ab970e1e490deea8a5f960d806522fafdb33c8eaa38bc0ae970efc2256fc5746f0ecfec770af24c44864a3e6772a64f2e9f031f96fd4af7fd0483110@147.75.71.217:30304" \ 
  > $HOME/testnet/logs/geth_1.log &
 ```
-**output : nohup: ignoring input and redirecting stderr to stdout ;** 
+ - #### **output : nohup: ignoring input and redirecting stderr to stdout ;** 
 **--Then press ctrl+c**
 
 ## Running Consensus Layer :
@@ -115,7 +115,7 @@ nohup lighthouse beacon \
 --suggested-fee-recipient="<YOUR-ADDRESS>" \
 > $HOME/testnet/logs/beacon_1.log &
 ```
-**output : nohup: ignoring input and redirecting stderr to stdout ;** 
+ - #### **output : nohup: ignoring input and redirecting stderr to stdout ;** 
 **--Then press ctrl+c**
 
 ## Getting ENR Key :
@@ -152,7 +152,7 @@ bn \
 --boot-nodes="<YOUR-ENR>,enr:-MS4QHXShZPtKwtexK2p9yCxMxDwQ-EvdH_VemoxyVyweuaBLOC_8cmOzyx7Gy-q6-X8KGT1d_rhAn_ekXnhpCkA_REHh2F0dG5ldHOIAAAAAAAAAACEZXRoMpBMfxReAmd2k___________gmlkgnY0gmlwhJNLR9mJc2VjcDI1NmsxoQJB10N42nK6rr7Q_NIJNkJFi2uo6itMTOQlPZDcCy09T4hzeW5jbmV0c4gAAAAAAAAAAIN0Y3CCIyiDdWRwgiMo,enr:-MS4QEw_RpORuoXgJ0279QuVLLFAiXevNdYtU7vR8S1CY7X9CS6tceMbaxdIIJYRmHN43ClqHtE2b0H0maSb18cm9D0Hh2F0dG5ldHOIAAAAAAAAAACEZXRoMpBMfxReAmd2k___________gmlkgnY0gmlwhJNLR9mJc2VjcDI1NmsxoQOkQIyCVHLbLjIFMjqNSJEUsbYMe4Tsv9blUWvN6Rsft4hzeW5jbmV0c4gAAAAAAAAAAIN0Y3CCIymDdWRwgiMp,enr:-LS4QExQqM_G3y2CfedjrGEbapN5Vprdy7Iq2gzfylwLW8PQf4Tf82XnQxLg9PbH8QLwsMaoWwYjTo7xHQ4oy4eCn7kBh2F0dG5ldHOIAAAAAAAAAACEZXRoMpBMfxReAmd2k___________gmlkgnY0iXNlY3AyNTZrMaEDec2pARmw1GLJHiXIDaG-6J74gZ1SyDcF_CuVUzRsmX2Ic3luY25ldHMAg3RjcIIjKoN1ZHCCIyo" \ 
 > $HOME/testnet/logs/beacon_2.log &
 ```
-**output : nohup: ignoring input and redirecting stderr to stdout ;** 
+ - #### **output : nohup: ignoring input and redirecting stderr to stdout ;** 
 **--Then press ctrl+c**
 
 ## Check Logs :
@@ -166,3 +166,7 @@ tail -f logs/beacon_1.log
 ```
 tail -f logs/beacon_2.log
 ```
+ 
+ ## Staking Part :
+
+ - #### It will be announced by the team in the upcoming days , waiting for next update
