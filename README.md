@@ -1,6 +1,3 @@
-# Gitshock-TestNode
-
-
 <h1 align="center"> THIS IS TUTORIAL FOR GETH - LIGHTHOUSE </h1>
 
 
