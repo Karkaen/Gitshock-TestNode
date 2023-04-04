@@ -98,7 +98,7 @@ sudo ufw allow 5053/tcp
 sudo ufw allow 9000/tcp 
 sudo ufw allow 30303/udp
 ```
- -  #### Please edit value of --identity as you wish , for example --identity "YOUR-NICK-NAME"
+ -  #### Please edit  "YOUR-NICK-NAME" for example "tommy"
 ```
  nohup geth \ 
  --datadir "$HOME/testnet/data" \ 
@@ -120,7 +120,7 @@ sudo ufw allow 30303/udp
 
 ## Running Consensus Layer :
 
- - ####  Please edit <YOUR-ADDRESS> and <YOUR-NAME> example "0xB0F9575xC688Ed5C67f50B3aF0d195664c2EB123" and "your-nick-name"
+ - ####  Please edit YOUR METAMASK ADDRESS and YOUR-NAME for example "0xB0F9575xC688Ed5C67f50B3aF0d195664c2EB123" and "TOMMY"
 
 ```
 nohup lighthouse beacon \
@@ -152,7 +152,7 @@ curl http://localhost:5052/eth/v1/node/identity | jq .data.enr
 
 ## Running Other Consensus Layer :
 
- - #### Please edit YOUR-ADDRESS, YOUR-IP and YOUR-ENR For this  ; Do not modify anything except for <YOUR_ENR>.
+ - #### Please edit YOUR METAMASK ADDRESS
 
 ```
 nohup lighthouse \ 
@@ -172,7 +172,7 @@ bn \
 --port 9001 \ 
 --enr-address $(curl -s ifconfig.me) \
 --execution-jwt "$HOME/testnet/jwt.hex" \ 
---suggested-fee-recipient="<YOUR-ADDRESS>" \ 
+--suggested-fee-recipient="METAMASK-ADDRESS" \ 
 --boot-nodes="$(curl -s http://localhost:5052/eth/v1/node/identity | jq -r '.data | .enr'),enr:-MS4QHXShZPtKwtexK2p9yCxMxDwQ-EvdH_VemoxyVyweuaBLOC_8cmOzyx7Gy-q6-X8KGT1d_rhAn_ekXnhpCkA_REHh2F0dG5ldHOIAAAAAAAAAACEZXRoMpBMfxReAmd2k___________gmlkgnY0gmlwhJNLR9mJc2VjcDI1NmsxoQJB10N42nK6rr7Q_NIJNkJFi2uo6itMTOQlPZDcCy09T4hzeW5jbmV0c4gAAAAAAAAAAIN0Y3CCIyiDdWRwgiMo,enr:-MS4QEw_RpORuoXgJ0279QuVLLFAiXevNdYtU7vR8S1CY7X9CS6tceMbaxdIIJYRmHN43ClqHtE2b0H0maSb18cm9D0Hh2F0dG5ldHOIAAAAAAAAAACEZXRoMpBMfxReAmd2k___________gmlkgnY0gmlwhJNLR9mJc2VjcDI1NmsxoQOkQIyCVHLbLjIFMjqNSJEUsbYMe4Tsv9blUWvN6Rsft4hzeW5jbmV0c4gAAAAAAAAAAIN0Y3CCIymDdWRwgiMp,enr:-LS4QExQqM_G3y2CfedjrGEbapN5Vprdy7Iq2gzfylwLW8PQf4Tf82XnQxLg9PbH8QLwsMaoWwYjTo7xHQ4oy4eCn7kBh2F0dG5ldHOIAAAAAAAAAACEZXRoMpBMfxReAmd2k___________gmlkgnY0iXNlY3AyNTZrMaEDec2pARmw1GLJHiXIDaG-6J74gZ1SyDcF_CuVUzRsmX2Ic3luY25ldHMAg3RjcIIjKoN1ZHCCIyo" \
 > $HOME/testnet/logs/beacon_2.log &
 ```
