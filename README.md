@@ -152,7 +152,7 @@ curl http://localhost:5052/eth/v1/node/identity | jq .data.enr
 
 ## Running Other Consensus Layer :
 
- - #### Please edit YOUR METAMASK ADDRESS
+ - #### Please edit only YOUR METAMASK ADDRESS , code block do the rest , dont worry
 
 ```
 nohup lighthouse \ 
