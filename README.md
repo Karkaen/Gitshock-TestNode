@@ -84,7 +84,20 @@ rm -rf cartenz-iteration-70.a.zip
 ```
 screen -S cartenz
 ```
+ -  #### Please make sure that ports are open before you start 
 
+```
+sudo ufw enable
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow 22/tcp
+sudo ufw allow 8545/tcp
+sudo ufw allow 30303/tcp
+sudo ufw allow 5052/tcp 
+sudo ufw allow 5053/tcp 
+sudo ufw allow 9000/tcp 
+sudo ufw allow 30303/udp
+```
  -  #### Please edit value of --identity as you wish , for example --identity "YOUR-NICK-NAME"
 ```
  nohup geth \ 
