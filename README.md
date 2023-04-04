@@ -107,7 +107,7 @@ sudo ufw allow 30303/udp
  --http.port 8545 \ 
  --http.addr 0.0.0.0 \ 
  --http.corsdomain "*" \ 
- --identity "CHANGE-ME" \ 
+ --identity "PUT-YOUR-NAME" \ 
  --networkid=1881 \ 
  --syncmode=full \ 
  --authrpc.jwtsecret="$HOME/testnet/jwt.hex" \ 
@@ -134,9 +134,9 @@ nohup lighthouse beacon \
 --enr-udp-port=9000 \
 --enr-tcp-port=9000 \
 --discovery-port=9000 \
---graffiti "<YOUR-NAME>" \
+--graffiti "PUT-YOUR-NAME" \
 --execution-jwt "$HOME/testnet/jwt.hex" \
---suggested-fee-recipient="<YOUR-ADDRESS>" \
+--suggested-fee-recipient="METAMASK-ADDRESS" \
 > $HOME/testnet/logs/beacon_1.log &
 ```
  - #### **output : nohup: ignoring input and redirecting stderr to stdout ;** 
@@ -170,10 +170,10 @@ bn \
 --enr-udp-port 9001 \ 
 --enr-tcp-port 9001 \ 
 --port 9001 \ 
---enr-address <YOUR-IP> \
+--enr-address $(curl -s ifconfig.me) \
 --execution-jwt "$HOME/testnet/jwt.hex" \ 
 --suggested-fee-recipient="<YOUR-ADDRESS>" \ 
---boot-nodes="<YOUR-ENR>,enr:-MS4QHXShZPtKwtexK2p9yCxMxDwQ-EvdH_VemoxyVyweuaBLOC_8cmOzyx7Gy-q6-X8KGT1d_rhAn_ekXnhpCkA_REHh2F0dG5ldHOIAAAAAAAAAACEZXRoMpBMfxReAmd2k___________gmlkgnY0gmlwhJNLR9mJc2VjcDI1NmsxoQJB10N42nK6rr7Q_NIJNkJFi2uo6itMTOQlPZDcCy09T4hzeW5jbmV0c4gAAAAAAAAAAIN0Y3CCIyiDdWRwgiMo,enr:-MS4QEw_RpORuoXgJ0279QuVLLFAiXevNdYtU7vR8S1CY7X9CS6tceMbaxdIIJYRmHN43ClqHtE2b0H0maSb18cm9D0Hh2F0dG5ldHOIAAAAAAAAAACEZXRoMpBMfxReAmd2k___________gmlkgnY0gmlwhJNLR9mJc2VjcDI1NmsxoQOkQIyCVHLbLjIFMjqNSJEUsbYMe4Tsv9blUWvN6Rsft4hzeW5jbmV0c4gAAAAAAAAAAIN0Y3CCIymDdWRwgiMp,enr:-LS4QExQqM_G3y2CfedjrGEbapN5Vprdy7Iq2gzfylwLW8PQf4Tf82XnQxLg9PbH8QLwsMaoWwYjTo7xHQ4oy4eCn7kBh2F0dG5ldHOIAAAAAAAAAACEZXRoMpBMfxReAmd2k___________gmlkgnY0iXNlY3AyNTZrMaEDec2pARmw1GLJHiXIDaG-6J74gZ1SyDcF_CuVUzRsmX2Ic3luY25ldHMAg3RjcIIjKoN1ZHCCIyo" \ 
+--boot-nodes="$(curl -s http://localhost:5052/eth/v1/node/identity | jq -r '.data | .enr'),enr:-MS4QHXShZPtKwtexK2p9yCxMxDwQ-EvdH_VemoxyVyweuaBLOC_8cmOzyx7Gy-q6-X8KGT1d_rhAn_ekXnhpCkA_REHh2F0dG5ldHOIAAAAAAAAAACEZXRoMpBMfxReAmd2k___________gmlkgnY0gmlwhJNLR9mJc2VjcDI1NmsxoQJB10N42nK6rr7Q_NIJNkJFi2uo6itMTOQlPZDcCy09T4hzeW5jbmV0c4gAAAAAAAAAAIN0Y3CCIyiDdWRwgiMo,enr:-MS4QEw_RpORuoXgJ0279QuVLLFAiXevNdYtU7vR8S1CY7X9CS6tceMbaxdIIJYRmHN43ClqHtE2b0H0maSb18cm9D0Hh2F0dG5ldHOIAAAAAAAAAACEZXRoMpBMfxReAmd2k___________gmlkgnY0gmlwhJNLR9mJc2VjcDI1NmsxoQOkQIyCVHLbLjIFMjqNSJEUsbYMe4Tsv9blUWvN6Rsft4hzeW5jbmV0c4gAAAAAAAAAAIN0Y3CCIymDdWRwgiMp,enr:-LS4QExQqM_G3y2CfedjrGEbapN5Vprdy7Iq2gzfylwLW8PQf4Tf82XnQxLg9PbH8QLwsMaoWwYjTo7xHQ4oy4eCn7kBh2F0dG5ldHOIAAAAAAAAAACEZXRoMpBMfxReAmd2k___________gmlkgnY0iXNlY3AyNTZrMaEDec2pARmw1GLJHiXIDaG-6J74gZ1SyDcF_CuVUzRsmX2Ic3luY25ldHMAg3RjcIIjKoN1ZHCCIyo" \
 > $HOME/testnet/logs/beacon_2.log &
 ```
  - #### **output : nohup: ignoring input and redirecting stderr to stdout ;** 
@@ -190,6 +190,15 @@ tail -f logs/beacon_1.log
 ```
 tail -f logs/beacon_2.log
 ```
+## Delete the whole system !! DELETES EVERYTHING :
+```
+killall geth
+killall lighthouse 
+cd ~
+rm -rf testnet 
+ 
+```
+ 
  
  ## Staking Part :
 
