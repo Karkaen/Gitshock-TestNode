@@ -30,7 +30,7 @@ mv lighthouse /usr/local/bin
 ## Install Go :
 ```
 ver="1.19" 
-cd $HOME`  
+cd $HOME  
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"
 sudo rm -rf /usr/local/go
 sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz" 
