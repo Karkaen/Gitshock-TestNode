@@ -201,5 +201,17 @@ rm -rf testnet
  
  
  ## Staking Part :
+ ```
+ git clone https://github.com/gitshock-labs/staking-cli.git
+cd staking-cli
+git checkout main
+sudo apt install python3-pip -y
+pip3 install -r requirements.txt
+sudo python3 setup.py install
+./deposit.sh install
+```
+```
+./deposit.sh new-mnemonic
+```
 
  - #### It will be announced by the team in the upcoming days , waiting for next update
