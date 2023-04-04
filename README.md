@@ -98,7 +98,7 @@ sudo ufw allow 5053/tcp
 sudo ufw allow 9000/tcp 
 sudo ufw allow 30303/udp
 ```
- -  #### Please edit  "YOUR-NICK-NAME" for example "tommy"
+ -  #### Please edit identity for example "tommy"
 ```
  nohup geth \ 
  --datadir "$HOME/testnet/data" \ 
@@ -120,7 +120,7 @@ sudo ufw allow 30303/udp
 
 ## Running Consensus Layer :
 
- - ####  Please edit YOUR METAMASK ADDRESS and YOUR-NAME for example "0xB0F9575xC688Ed5C67f50B3aF0d195664c2EB123" and "TOMMY"
+ - ####  Please edit suggested-fee-recipient and graffiti for example "0xB0F9575xC688Ed5C67f50B3aF0d195664c2EB123" and "TOMMY"
 
 ```
 nohup lighthouse beacon \
@@ -152,7 +152,7 @@ curl http://localhost:5052/eth/v1/node/identity | jq .data.enr
 
 ## Running Other Consensus Layer :
 
- - #### Please edit only YOUR METAMASK ADDRESS , code block do the rest , dont worry
+ - #### Please edit only suggested-fee-recipient , code block do the rest , dont worry
 
 ```
 nohup lighthouse \ 
