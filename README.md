@@ -190,16 +190,7 @@ tail -f logs/beacon_1.log
 ```
 tail -f logs/beacon_2.log
 ```
-## Delete the whole system !! DELETES EVERYTHING :
-```
-killall geth
-killall lighthouse 
-cd ~
-rm -rf testnet 
- 
-```
- 
- 
+
  ## Staking Part :
  ```
  git clone https://github.com/gitshock-labs/staking-cli.git
@@ -215,3 +206,13 @@ sudo python3 setup.py install
 ```
 
  - #### It will be announced by the team in the upcoming days , waiting for next update
+ 
+ 
+ ## Delete the whole system !! DELETES EVERYTHING :
+```
+killall geth
+killall lighthouse 
+cd ~
+rm -rf testnet 
+ 
+```
